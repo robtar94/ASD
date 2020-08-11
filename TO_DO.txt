@@ -1,0 +1,5 @@
+KOPIEC:
+
+1.	Ostrzeżenia
+2.	Złe wyjście (jest zupełnie inne niz to które generuje Pana program)
+3.	heap_max nie zmienia kopca
