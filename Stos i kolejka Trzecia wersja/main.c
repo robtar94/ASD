@@ -29,7 +29,8 @@ int main()
 
 
   /* Kolejka */
-
+  
+ 
     init_Q(&Q);
     Enqueue(&Q,1);
     Enqueue(&Q,2);

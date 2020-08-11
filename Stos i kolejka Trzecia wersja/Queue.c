@@ -9,8 +9,15 @@ void init_Q(Queue *Q)
 }
  void Enqueue(Queue *Q, int k)
 {
-    Q->data[Q->tail]=k;
-    Q->tail++;
+	Q->data[Q->tail]=k;
+	
+	if(Q->tail == Q->length)
+	
+		Q->tail = 0;
+	
+	else
+		 Q->tail++;
+
 }
 
  int Dequeue(Queue *Q)
