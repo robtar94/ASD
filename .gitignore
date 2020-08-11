@@ -3,6 +3,5 @@
 *.exe
 *.layout
 *.objs
-*.cbp
 *.depend
 
