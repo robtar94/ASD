@@ -1,6 +1,6 @@
 int a,b,c,d
 read (a,b)
-
+// Wszystkie metody w ktorych wystepuje dzielenie nie sa w pełni uniersalne, ponieważ może wystąpić dzielenie przez zero.
 
 // 1 metoda
 // PRIORYTET OPERATORÓW:
@@ -169,11 +169,11 @@ write(c,d)
 
 // metoda 12
 
-// sqrt - oblicza pierwiastek drugiego stopnia z liczby
+// √ - oblicza pierwiastek drugiego stopnia z liczby
 
 // PRIORYTET OPERATORÓW
 // ()
-// sqrt
+// √
 // *
 // +/-
 
@@ -181,8 +181,8 @@ c = a
 d = b 
 
 c = c*c + d*d // 4 operacje
-d = sqrt(c - d*d) // 4 operacje
-c = sqrt(c - d*d) // 4 operacje
+d = √(c - d*d) // 4 operacje
+c = √(c - d*d) // 4 operacje
 write(c,d)
 // razem 12 operacji
 
