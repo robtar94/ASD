@@ -60,18 +60,18 @@ write(c,d)
 
 // metoda  5
  
-// a XOR b - operacja bitowa zwana alternatywą wykluczającą.
+// d XOR c - operacja bitowa zwana alternatywą wykluczającą.
 // Wynikowy bit jest ustawiany na 1 tylko wówczas gdy dokładnie jeden bit,
 // któregoś z argumentów ustawiony jest na 1.
  
 // PRIORYTET OPERATORÓW
 // ()
-// ^
+// XOR
 // =
 
 c = a
 d = b
-c = d ^ c ^ (d=c) // 2 operacje przypisania, 2 operacje XOR
+c = d XOR c XOR (d=c) // 2 operacje przypisania, 2 operacje XOR
 write(c,d)
 
 //razem 4 operacje
@@ -126,14 +126,14 @@ write(c,d)
 // metoda 9
 
 // PRIORYTET OPERATORÓW
-// ^
+// XOR
 // =
 
 c = a
 d = b
-c = c ^ d // 1 XOR, 1 operacja przypisania
-d = c ^ d // 1 XOR, 1 operacja przypisania
-c = c ^ d // 1 XOR, 1 operacja przypisania
+c = c XOR d // 1 XOR, 1 operacja przypisania
+d = c XOR d // 1 XOR, 1 operacja przypisania
+c = c XOR d // 1 XOR, 1 operacja przypisania
 write(c,d)
 
 // razem 6 operacji
@@ -209,19 +209,19 @@ write(c,d)
 
 // metoda 14
 
-// c ~ d - Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
-// Możemy zatem powiedzieć, że wynikiem jest 1 gdy bit a nie jest ustawiony na 1. 
+// c NOT d - Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
+// Możemy zatem powiedzieć, że wynikiem jest 1 gdy bit c nie jest ustawiony na 1.
 
 // PRIORYTET OPERATORÓW
-//   ~
-//   ^
+//   NOT
+//   XOR
 //   =
 
 c = a
 d = b
-c = ~(c ^ d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
-d = ~(c ^ d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
-c = ~(c ^ d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
+c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
+d = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
+c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
 write(c,d)
 
 // razem 9 operacji
