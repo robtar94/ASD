@@ -4,14 +4,13 @@ int main(void)
 {
 
 	int a, b, c, d;
-	
-	
+	int n;
 	
 	scanf("%d %d", &a, &b);
 	c = a;
 	d = b;
+	
 	/* metoda 1*/
-
 	c = (c + d) - (d = c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
 		
 	printf("%d %d\n", c, d);
@@ -154,13 +153,13 @@ int main(void)
 	printf("%d %d\n", c, d);
 	
 	/*metoda 15 */
-	int n;
+	
 	n = 3;
 	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
-	c = (c + d) - (d = c) + n - n;
+	c = (c + d) - (d = c) + n - n; /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
 
 	return 0;
 
