@@ -113,7 +113,7 @@ write(c,d)
 // PRIORYTET OPERATORÓW
 // /*
 // =
-
+real a,b
 c = a
 d = b
 c = c / d // 1 dzielenie, 1 przypisanie

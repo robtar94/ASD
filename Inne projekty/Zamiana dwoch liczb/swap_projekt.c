@@ -67,7 +67,7 @@ int main(void)
 		
 	printf("%d %d\n", c, d);
 		
-	/*metoda 8 */
+	/*metoda 8 - dziala tylko na float (testowane na adjule) */
 	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
