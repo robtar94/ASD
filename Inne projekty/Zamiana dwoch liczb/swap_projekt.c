@@ -119,16 +119,6 @@ int main(void)
 	c = sqrt(c - d*d); 
 	printf("%d %d\n", c, d);
 	
-    /*metoda 12 */
-	scanf ("%d %d", &a, &b);
-	c = a;
-	d = b;
-		
-	c = c*c + d*d; 
-	d = sqrt(c - d*d); 
-	c = sqrt(c - d*d); 
-	printf("%d %d\n", c, d);
-	
 	/*metoda 13 */
 	scanf ("%d %d", &a, &b);
 	c = a;

@@ -10,9 +10,9 @@ for (i = 1; i <=10; i++)
 	c = a;
 	d = b;
 	
-	c = d - c; 
-	d = d - c;
-	c = d + c;
+	c = c - d; 
+	d = c + d;
+	c = d - c;
 	
 	printf("%d %d\n", c, d);
 	

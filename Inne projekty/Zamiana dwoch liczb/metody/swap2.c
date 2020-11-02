@@ -1,17 +1,18 @@
 #include <stdio.h>
 int main (void)
 {
-	float a,b,n;
+	float a,b,c,d;
 	int i;
-	n = 3;
 	for (i = 1; i <=10; i++)
 	{
 		scanf ("%f %f", &a, &b);
+		c = a;
+		d = b;
 		
 		
-		a = (a + b) - (b = a) + n - n;
+		c = d / c * (d=c);
 		
-		printf("%.0f %.0f\n", a, b);
+		printf("%g %g\n", c, d);
 		
 		
 		
