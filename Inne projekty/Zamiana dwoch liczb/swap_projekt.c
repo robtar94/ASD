@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 int main(void)
 {
 
@@ -11,42 +10,40 @@ int main(void)
 	d = b;
 	
 	/* metoda 1*/
-	c = (c + d) - (d = c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c = (c + d) - (d = c); 
 		
 	printf("%d %d\n", c, d);
 		
 	/* metoda 2 - dobrze dziala tylko na float (testowane na adjule) */
-	scanf("%d %d", &a, &b);
+	
 	c = a;
 	d = b;
-	c = (d / c) * (d=c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c = (d / c) * (d=c); 
 		
 	printf("%d %d\n", c, d);
 		
 	/* metoda 3 */
-	scanf("%d %d", &a, &b);
+	
 	c = a;
 	d = b;
-	c=d-c+(d=c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c=d-c+(d=c); 
 		
 	printf("%d %d\n", c, d);
 		
 	/* metoda 4 */
-	scanf("%d %d", &a, &b);
+	
 	c = a;
 	d = b;
-	c = d * c / (d=c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c = d * c / (d=c); 
 	printf("%d %d\n", c, d);
 		
 	/*metoda 5 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
-	c = d ^ c ^ (d=c); /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c = d ^ c ^ (d=c); 
 	printf("%d %d\n", c, d);
 		
 	/*metoda 6 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -57,7 +54,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 		
 	/*metoda 7 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -68,7 +64,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 		
 	/*metoda 8 - dziala tylko na float (testowane na adjule) */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -79,7 +74,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 		
 	/*metoda 9 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -90,7 +84,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 
 	/*metoda 10 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -100,7 +93,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 	
 	/*metoda 11 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -110,17 +102,14 @@ int main(void)
 	printf("%d %d\n", c, d);
 	
 	/*metoda 12 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
-	c = c*c + d*d; 
-	d = sqrt(c - d*d); 
-	c = sqrt(c - d*d); 
-	printf("%d %d\n", c, d);
+	c = d - ~c - 1;
+	d = c + ~d + 1; 
+	c = c + ~d + 1; 
 	
 	/*metoda 13 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -132,7 +121,6 @@ int main(void)
 	printf("%d %d\n", c, d);
 	
 	/*metoda 14 */
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
@@ -145,11 +133,10 @@ int main(void)
 	/*metoda 15 */
 	
 	n = 3;
-	scanf ("%d %d", &a, &b);
 	c = a;
 	d = b;
 		
-	c = (c + d) - (d = c) + n - n; /* tutaj jest ostrzezenie, ale jego usuniecie wymaga uzycia zmiennej pomocniczej co podwaza sens tej metody */
+	c = (c + d) - (d = c) + n - n; 
 
 	return 0;
 

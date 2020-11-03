@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 int main (void)
 {
 
@@ -11,9 +10,9 @@ for (i = 1; i <=10; i++)
 	c = a;
 	d = b;
 	
-	c = c*c + d*d; 
-	d = sqrt(c - d*d); 
-	c = sqrt(c - d*d); 
+	c = d - ~c - 1;
+	d = c + ~d + 1; 
+	c = c + ~d + 1;
 	
 	
 	printf("%d %d\n", c, d);

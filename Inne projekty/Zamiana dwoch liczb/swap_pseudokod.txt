@@ -1,247 +1,133 @@
-int a,b,c,d
-read (a,b)
 // Wszystkie metody w ktorych wystepuje dzielenie nie sa w pełni uniersalne, ponieważ może wystąpić dzielenie przez zero.
 
-// 1 metoda
-// PRIORYTET OPERATORÓW:
+// d XOR c - operacja bitowa zwana alternatywą wykluczającą.
+// Wynikowy bit jest ustawiany na 1 tylko wówczas gdy dokładnie jeden bit,
+// któregoś z argumentów ustawiony jest na 1.
+
+// c NOT d - Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
+// Możemy zatem powiedzieć, że wynikiem jest 1 gdy bit c nie jest ustawiony na 1.
+
+// PRIORYTETY OPERATORÓW:
 // ()
+// */
 // +/-
+// NOT
+//	XOR
 // = (podstawienie)
 
-c = a
-d = b
-c = (c + d) - (d = c) // 1 dodawanie, 1 odejmowanie, 2 przypisania
-write(c,d) 
 
+// 1 metoda
+
+c = (c + d) - (d = c) // 1 dodawanie, 1 odejmowanie, 2 przypisania
+ 
 // razem 4 operacje 
 
 // 2 metoda
-// PRIORYTET OPERATORÓW:
-
-// ()
-// */
-// =
-real a, b
-c = a
-d = b
 
 c = d / c * (d=c) // 2 przypisania, 1 mnozenie, 1 dzielenie
-write(c,d)
+
 // razem 4 operacje 
 
 // metoda 3
 
-// PRIORYTET OPERATORÓW
-// ()
-// +/-
-// =
-
-c = a
-d = b
-
 c=d-c+(d=c) // 2 przypisania, 1 odejmowanie, 1 dodawanie
-write(c,d)
- 
+
 // razem 4 operacje 
 
 // metoda 4
 
-// PRIORYTET OPERATORÓW
-// ()
-// */
-// =
-c = a
-d = b
-
 c = d * c / (d=c) // 1 mnozenie, 1 dzielenie, 2 operacje przypisania
-write(c,d)
 
 //razem 4 operacje
 
 // metoda  5
- 
-// d XOR c - operacja bitowa zwana alternatywą wykluczającą.
-// Wynikowy bit jest ustawiany na 1 tylko wówczas gdy dokładnie jeden bit,
-// któregoś z argumentów ustawiony jest na 1.
- 
-// PRIORYTET OPERATORÓW
-// ()
-// XOR
-// =
 
-c = a
-d = b
 c = d XOR c XOR (d=c) // 2 operacje przypisania, 2 operacje XOR
-write(c,d)
 
 //razem 4 operacje
 
-// metoda 6 
-
-// PRIORYTET OPERATORA
-// +/-
-// =
-
-c = a
-d = b
-
+// metoda 6
+ 
 c = c + d // 1 dodawanie, 1 przypisanie
 d = c - d // 1 odejmowanie, 1 przypisanie 
 c = c - d // 1 odejmowanie, 1 przypisanie
-write(c,d)
  
 // razem 6 operacji
 
-//metoda 7 
-
-// PRIORYTET OPERATORÓW
-// /*
-// =
-
-c = a
-d = b
-
+//metoda 7
+ 
 c = c * d // 1 mnozenie, 1 podstawienie
 d = c / d // 1 dzielenie, 1 podstawienie
 c = c / d // 1 dzielenie, 1 podstawienie
-write(c,d)
+
+
  
 // razem 6 operacji
 
 //metoda 8
 
-// PRIORYTET OPERATORÓW
-// /*
-// =
-real a,b
-c = a
-d = b
 c = c / d // 1 dzielenie, 1 przypisanie
 d = c * d // 1 mnozenie, 1 przypisanie
 c = d / c // 1 dzielenie, 1 przypisanie
-write(c,d) 
 
 // razem 6 operacji
 
 // metoda 9
 
-// PRIORYTET OPERATORÓW
-// XOR
-// =
-
-c = a
-d = b
 c = c XOR d // 1 XOR, 1 operacja przypisania
 d = c XOR d // 1 XOR, 1 operacja przypisania
 c = c XOR d // 1 XOR, 1 operacja przypisania
-write(c,d)
 
 // razem 6 operacji
 
 //metoda 10
 
-// PRIORYTET OPERATORÓW
-// +/-
-// =
-c = a
-d = b
 c = c - d // 1 operacja przypisania, 1 odejmowanie
 d = c + d // 1 operacja przypisania, 1 dodawanie
 c = d - c // 1 operacja przypisania, 1 odejmowanie
-write(c,d)
 
-// lacznie 6 operacji
+// razem 6 operacji
 
 // metoda 11
 
-// PRIORYTET OPERATORÓW
-// +/-
-// =
-
-c = a
-d = b
 c = d - c // 1 odejmowanie, 1 przypisanie 
 d = d - c // 1 odejmowanie, 1 przypisanie
 c = d + c // 1 dodawanie, 1 przypisanie
-write(c,d)
 
 // razem 6 operacji
 
 // metoda 12
+c = d - NOT(c) - 1 // 4 operacje
+d = c + NOT(d) + 1 // 4 operacje
+c = c + NOT(d) + 1 // 4 operacje
 
-// √ - oblicza pierwiastek drugiego stopnia z liczby
-
-// PRIORYTET OPERATORÓW
-// ()
-// √
-// *
-// +/-
-
-c = a
-d = b 
-
-c = c*c + d*d // 4 operacje
-d = √(c - d*d) // 4 operacje
-c = √(c - d*d) // 4 operacje
-write(c,d)
-// razem 12 operacji
-
-
+// razem 12 operacji 
 
 
 //metoda 13
-
-// PRIORYTET OPERATORÓW
-// */
-// +/-
-// =
-
-c = a
-d = b
 
 c = c + d //1 dodawanie 1 przypisanie
 d = d - c //1 odejmowanie 1 przypisanie
 c = c + d //1 dodawanie 1 przypisanie
 d = (-1) * d //1 mnożenie 1 przypisanie
-write(c,d)
 
-// lacznie 8 operacji
+// razem 8 operacji
 
 // metoda 14
 
-// c NOT d - Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
-// Możemy zatem powiedzieć, że wynikiem jest 1 gdy bit c nie jest ustawiony na 1.
-
-// PRIORYTET OPERATORÓW
-//   NOT
-//   XOR
-//   =
-
-c = a
-d = b
 c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
 d = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
 c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
-write(c,d)
 
 // razem 9 operacji
 
 //metoda 15
 
- int n
- read(n)
- 
-// PRIORYTET OPERATORÓW
-// ()
-// +/-
-// =
-
 c = (c + d) - (d = c) + n - n // 1 dodawanie, 2 odejmowania, 2 podstawienia
-write(c,d)
 
 // razem 5 operacji
 
-
+d = (d + c) - (c = d) + 2n - 2n
 
 
 
