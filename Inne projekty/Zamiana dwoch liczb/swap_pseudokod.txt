@@ -12,7 +12,7 @@
 // */
 // +/-
 // NOT
-//	XOR
+// XOR
 // = (podstawienie)
 
 
@@ -60,8 +60,6 @@ c = c * d // 1 mnozenie, 1 podstawienie
 d = c / d // 1 dzielenie, 1 podstawienie
 c = c / d // 1 dzielenie, 1 podstawienie
 
-
- 
 // razem 6 operacji
 
 //metoda 8
@@ -127,7 +125,7 @@ c = (c + d) - (d = c) + n - n // 1 dodawanie, 2 odejmowania, 2 podstawienia
 
 // razem 5 operacji
 
-d = (d + c) - (c = d) + 2n - 2n
+
 
 
 
