@@ -10,11 +10,11 @@ for (i = 1; i <=10; i++)
 	c = a;
 	d = b;
 	
-	c = c * d;
-	d = c / d;
-	c = c / d; 
-	
-	printf("%d %d\n", c, d);
+  /* metoda 1*/
+	c = (c + d) - (d = c);
+
+  printf("%d %d\n", c, d); 
+	 
 	
 }
 return 0;

@@ -7,15 +7,23 @@ int i;
 for (i = 1; i <=10; i++)
 {
 	scanf("%d %d", &a, &b);
+
+/* metoda 2 */
+
 	c = a;
 	d = b;
 	
-	c = d ^ c ^ (d=c);
-	
+	c=d-c+(d=c);
+
 	printf("%d %d\n", c, d);
 	
 }
-return 0;
+	return 0;
 
 }
+
+
+
+
+	
 
