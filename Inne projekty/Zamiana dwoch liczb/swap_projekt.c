@@ -1,92 +1,40 @@
 #include <stdio.h>
 int main(void)
 {
-
-	int a, b, c, d;
+	double a,b,c,d;
+	scanf("%lf %lf", &a,&b);
 	
-
-	scanf("%d %d", &a, &b);
-	
-	/*metoda 1 */
+	printf("Metoda 1:\n");
 	
 	c = a;
 	d = b;
-
-	c = c + d;
-	d = c - d;
-	c = c - d;
-
-	printf("%d %d\n", c, d);
+	c = (c + d) - (d = c);
+	printf("%g %g\n", c, d);
 	
-	/*metoda 2 */
+	printf("Metoda 2:\n");
+	
 	c = a;
 	d = b;
-
-	c = c * d;
-	d = c / d;
-	c = c / d;
-
-	printf("%d %d\n", c, d);
+	c = d / c * (d=c);
+	printf("%g %g\n", c,d);
 	
-	/*metoda 3 */
-	c = a;
+	printf("Metoda 3:\n");
+	c = d;
 	d = b;
-
-	c = c ^ d;
-	d = c ^ d;
-	c = c ^ d;
-
-	printf("%d %d\n", c, d);
+	c=d-c+(d=c);
+	printf("%g %g\n", c,d);
 	
-	/*metoda 4 */
-	c = a;
+	printf("Metoda 4\n");
+	c = d;
 	d = b;
-
-	c = c - d;
-	d = c + d;
-	c = d - c;
-	
-	printf("%d %d\n", c, d);
-	
-	/*metoda 5 */
-	c = a;
-	d = b;
-
-	c = d - c;
-	d = d - c;
-	c = d + c;
-	printf("%d %d\n", c, d);
-	
-
-	
- /*metoda 6 */
-	c = a;
-	d = b;
-
-	c = c + d;
-	d = d - c;
-	c = c + d;
-	d = (-1) * d;
-
-	printf("%d %d\n", c, d);
-	
- /*metoda 7 */ 
-	c = a;
-	d = b;
-
-	c = ~(c ^ d);
-	d = ~(c ^ d);
-	c = ~(c ^ d);
-
-	printf("%d %d\n", c, d);
-	
-
-	return 0; 
-	
-		
+	c = d * c / (d=c);
+	printf("%g %g\n", c,d);
 	
 	
+	
+	
+	
+	
+	return 0;
 	
 }
-
-

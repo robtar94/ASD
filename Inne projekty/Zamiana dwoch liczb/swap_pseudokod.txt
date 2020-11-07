@@ -4,8 +4,36 @@
 // Wynikowy bit jest ustawiany na 1 tylko wówczas gdy dokładnie jeden bit,
 // któregoś z argumentów ustawiony jest na 1.
 
-//  NOT c - Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
+// Tablica prawdy dla operatora XOR:
++---+---+---------+
+| C | D | C XOR D |
++---+---+---------+
+| 0 | 0 |    0    |
++---+---+---------+
+| 1 | 0 |    1    |
++---+---+---------+
+| 0 | 1 |    1    |
++---+---+---------+
+| 1 | 1 |    0    |
++---+---+---------+
+
+
+
+//  NOT c  - Operacja dopełnienia bitowego. Jest to operacja jednoargumentowa. Wynikowy bit jest ustawiany na 1 tylko wówczas gdy bit argumentu jest ustawiony na 0.
 // Możemy zatem powiedzieć, że wynikiem jest 1 gdy bit c nie jest ustawiony na 1.
+
+// Tabela prawdy dla dopełnienia bitowego:
+ 
++---+-------+
+| C |  NOT C|
++---+-------+
+| 0 | 1     |
++---+-------+
+| 1 | 0     |
++---+-------+
+
+
+
 
 // PRIORYTETY OPERATORÓW:
 // ()
@@ -15,7 +43,38 @@
 // XOR
 // = (podstawienie)
 
-// metoda 1
+
+// 1 metoda
+
+c = (c + d) - (d = c) // 1 dodawanie, 1 odejmowanie, 2 przypisania
+ 
+// razem 4 operacje 
+
+// 2 metoda
+
+c = d / c * (d=c) // 2 przypisania, 1 mnozenie, 1 dzielenie
+
+// razem 4 operacje 
+
+// metoda 3
+
+c=d-c+(d=c) // 2 przypisania, 1 odejmowanie, 1 dodawanie
+
+// razem 4 operacje 
+
+// metoda 4
+
+c = d * c / (d=c) // 1 mnozenie, 1 dzielenie, 2 operacje przypisania
+
+//razem 4 operacje
+
+// metoda  5
+
+c = d XOR c XOR (d=c) // 2 operacje przypisania, 2 operacje XOR
+
+//razem 4 operacje
+
+// metoda 6
  
 c = c + d // 1 dodawanie, 1 przypisanie
 d = c - d // 1 odejmowanie, 1 przypisanie 
@@ -23,7 +82,7 @@ c = c - d // 1 odejmowanie, 1 przypisanie
  
 // razem 6 operacji
 
-//metoda 2
+//metoda 7
  
 c = c * d // 1 mnozenie, 1 podstawienie
 d = c / d // 1 dzielenie, 1 podstawienie
@@ -31,17 +90,23 @@ c = c / d // 1 dzielenie, 1 podstawienie
 
 // razem 6 operacji
 
-//metoda 3
+//metoda 8
 
-c = c XOR d // 1 dzielenie, 1 przypisanie
-d = c XOR d // 1 mnozenie, 1 przypisanie
-c = c XOR d // 1 dzielenie, 1 przypisanie
+c = c / d // 1 dzielenie, 1 przypisanie
+d = c * d // 1 mnozenie, 1 przypisanie
+c = d / c // 1 dzielenie, 1 przypisanie
 
 // razem 6 operacji
 
+// metoda 9
 
+c = c XOR d // 1 XOR, 1 operacja przypisania
+d = c XOR d // 1 XOR, 1 operacja przypisania
+c = c XOR d // 1 XOR, 1 operacja przypisania
 
-//metoda 4
+// razem 6 operacji
+
+//metoda 10
 
 c = c - d // 1 operacja przypisania, 1 odejmowanie
 d = c + d // 1 operacja przypisania, 1 dodawanie
@@ -49,7 +114,7 @@ c = d - c // 1 operacja przypisania, 1 odejmowanie
 
 // razem 6 operacji
 
-// metoda 5
+// metoda 11
 
 c = d - c // 1 odejmowanie, 1 przypisanie 
 d = d - c // 1 odejmowanie, 1 przypisanie
@@ -57,7 +122,15 @@ c = d + c // 1 dodawanie, 1 przypisanie
 
 // razem 6 operacji
 
-//metoda 6
+// metoda 12
+c = d - NOT(c) - 1 // 4 operacje
+d = c + NOT(d) + 1 // 4 operacje
+c = c + NOT(d) + 1 // 4 operacje
+
+// razem 12 operacji 
+
+
+//metoda 13
 
 c = c + d //1 dodawanie 1 przypisanie
 d = d - c //1 odejmowanie 1 przypisanie
@@ -66,7 +139,7 @@ d = (-1) * d //1 mnożenie 1 przypisanie
 
 // razem 8 operacji
 
-// metoda 7
+// metoda 14
 
 c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
 d = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
@@ -74,6 +147,11 @@ c = NOT(c XOR d) // 1 przypisanie, 1 dopełnienie bitowe, 1 XOR
 
 // razem 9 operacji
 
+//metoda 15
+
+c = (c + d) - (d = c) + n - n // 1 dodawanie, 2 odejmowania, 2 podstawienia
+
+// razem 5 operacji
 
 
 
