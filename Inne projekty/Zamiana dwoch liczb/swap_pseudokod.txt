@@ -123,6 +123,7 @@ c = d + c // 1 dodawanie, 1 przypisanie
 // razem 6 operacji
 
 // metoda 12
+
 c = d - NOT(c) - 1 // 4 operacje
 d = c + NOT(d) + 1 // 4 operacje
 c = c + NOT(d) + 1 // 4 operacje
