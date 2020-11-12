@@ -1,0 +1,14 @@
+// zad iloraz i reszta z dzielenia (str.62)
+// Dane:
+// nieujemna liczba calkowita a, dodatnia liczba calkowita b, iloraz q, reszta z dzielenia r.
+
+integer a,b,q,n
+read(a,b)
+r = a
+q = 0
+while r >= b
+	do r = r - b
+	q = q + 1
+write(q,r)
+
+
