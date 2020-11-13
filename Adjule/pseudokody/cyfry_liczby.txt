@@ -1,0 +1,10 @@
+//  oddzielnie wypisz liczby skladajace sie na liczbe calkowita n.
+int n,b
+b = 1
+while 10 * b <= n
+	do b = b * 10 
+while b != 1
+	do write (n div b)
+		n = n mod b
+		b = b div 10
+	write(n)

@@ -1,0 +1,6 @@
+// algorytm wyznaczania odwrotnej liczby dziesietnej n. (str.63)
+int n
+read(n)
+while (n != 0)
+	do write(n mod 10) // to mozna dac pod zmienna r
+	n = n div 10
