@@ -1,0 +1,8 @@
+// rownanie liniowe pseudokod ( jest a jest rowne 0)
+
+float a,b,c,x0
+read (a,b,c)
+if a == 0 then
+	x0 = (-c/b)
+else
+	write(rownanie nie jest liniowe, brak rozwiazan)

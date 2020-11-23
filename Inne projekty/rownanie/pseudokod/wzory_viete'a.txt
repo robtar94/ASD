@@ -1,0 +1,19 @@
+// viete - pseudokod
+//
+real a,b,c,p,q,x1,x2,delta
+read(a,b,c)
+p = b/a
+q = c/a
+delta = p * p - 4 * q
+if (delta >= 0) then
+	delta = sqrt(delta)
+	if (p < 0) then
+		x1 = (-p + delta)/2
+		x2 = q/x1
+	else
+		x2 = (-p - delta)/2
+		x1 = q/x2
+
+  write(x1,x2)
+else
+	write(brak pierwiastkow rzeczywistych)
