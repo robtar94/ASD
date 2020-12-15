@@ -14,11 +14,11 @@ int main (void)
 		for(i=0; i<n; i++) /*wypelnianie tablicy */
 		{
 			scanf("%d", &j); /* wczytanie liczby */
-			A[i] = j;
+			A[i] = j; /*umieszczanie liczby w tablicy */
 		}
 		bubble(A,n);
 		
-		/*printf("Posortowana tablica: ");*/
+		
 		for(i=0; i<n; i++) /*wypelnianie tablicy */
 		{
 			printf("%d ", A[i]); /* wczytanie liczby */
