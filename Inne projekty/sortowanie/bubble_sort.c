@@ -25,7 +25,7 @@ int main (void)
 		}
 		printf("\n");
 	}
-	
+	free(A);
 	return 0;
 }
 void swap(int *x, int *y)
