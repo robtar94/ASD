@@ -4,4 +4,7 @@
 *.layout
 *.objs
 *.depend
+*
+!*.c
+!Makefile
 
