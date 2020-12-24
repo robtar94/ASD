@@ -60,13 +60,14 @@ return 0;
 void write(Stack S)
 {
 int i;
-if(S.top == 0) printf("");
+if(S.top == 0) printf("\n");
 else
 {
 for (i = 0; i < S.top; i++)
 {
-printf("%d\n", S.data[i]);
+printf("%d ", S.data[i]);
 }
+putchar('\n');
 
 }
 
@@ -81,7 +82,7 @@ else printf("false\n");
 
 void write_pop(int k)
 {
-if(k == 0) printf("");
+if(k == 0) printf(" ");
 else printf("%d\n", k);
 }
 
