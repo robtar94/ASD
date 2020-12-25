@@ -89,7 +89,7 @@ else printf("%d\n", k);
 /* struktura kolejki */
 typedef struct Queue
 {
-    int size[10];
+    int data[10];
     int length;
     int head;
     int tail;
@@ -114,7 +114,7 @@ void init_Q(Queue *Q)
 }
 void Enqueue(Queue *Q, int k)
 {
-  Q->size[Q->tail]=k;
+  Q->data[Q->tail]=k;
   if (Q->tail == Q->length)
         Q->tail = 0;
   else
@@ -131,10 +131,10 @@ int Dequeue(Queue *Q)
    }
     else
     {
-        q = Q->size[Q->head];
+        q = Q->data[Q->head];
         for(i=0;i<(Q->tail);i++)
         {
-         Q->size[i]=Q->size[i+1];
+         Q->data[i]=Q->data[i+1];
         }
         Q->tail--;
     }
@@ -162,7 +162,7 @@ int write_Q(Queue Q)
 		i=Q.head;
 		while (i != Q.tail)
 		{
-			printf ("%d ", Q.size[i]);
+			printf ("%d ", Q.data[i]);
 			if (i==Q.length)
 			{
 				i=0;
@@ -193,8 +193,10 @@ void write_deq(int q)
 
 int main(void)
 {
+	Queue Q;
+	Stack S;
+
     /* Stos */
-    Stack S;
 	init(&S);
     push(&S,1);
     push(&S,2);
@@ -214,7 +216,7 @@ int main(void)
 
    /*Kolejka */
 
-   Queue Q;
+
    init_Q(&Q);
     Enqueue(&Q,1);
     Enqueue(&Q,2);
