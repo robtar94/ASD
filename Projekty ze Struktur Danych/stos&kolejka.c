@@ -7,7 +7,7 @@ typedef struct Stack
 	int top;
 }Stack;
 
-/* prototypy funkcji */
+/* prototypy funkcji stosu */
 void init (Stack *S);
 int push(Stack *S, int k);
 void write (Stack S);
@@ -16,7 +16,7 @@ int pop(Stack *S);
 void write_empty(int x);
 void write_pop(int k);
 
-/* tresc funkcji */
+/* tresc funkcji stosu */
 void init (Stack *S)
 {
 	S->top = 0; /* poczatkowa wartosc stosu. 0 oznacza stos pusty. */
@@ -86,8 +86,39 @@ if(k == 0) printf(" ");
 else printf("%d\n", k);
 }
 
+/* struktura kolejki */
+typedef struct Queue
+{
+    int size[10];
+    int length;
+    int head;
+    int tail;
+}Queue;
+
+/* prototypy funkcji kolejki */
+void init_Q(Queue *Q);
+int Queue_Empty(Queue Q);
+void Enqueue(Queue *Q, int x);
+int Dequeue (Queue *Q);
+int write_Q(Queue Q);
+void write_empty_Q(int k);
+void write_dequeue(int d);
+
+/* tresc funkcji kolejki */
+
+void init_Q(Queue *Q)
+{
+    Q->head=10;
+    Q->head=0;
+    Q->tail=0;
+}
+
+
+
+
 int main(void)
 {
+    /* Stos */
     Stack S;
 	init(&S);
     push(&S,1);
@@ -103,6 +134,13 @@ int main(void)
    write_pop(pop(&S));
    write(S);
    write_empty(stack_empty(S));
+
+   putchar('\n');
+
+   /*Kolejka */
+
+   Queue Q;
+
 
 	return 0;
 }
