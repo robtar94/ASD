@@ -187,16 +187,110 @@ void write_deq(int q)
     else printf("%d\n",q);
 }
 
+/* --- Implementacja kolejki przy pomocy dwoch stosow --- */
+
+typedef struct Queue2
+{
+
+
+Stack Data1;
+Stack Data2;
+int length;
+int head;
+int tail;
+
+}Queue2;
+
+/*prototypy funkcji */
+void init2 (Queue2 *K);
+void enqueue2(Queue2 *K, int k);
+void write_queue2(Queue2 K);
+int is_empty(Queue2 K);
+int check_empty(int x);
+int dequeue(Queue2 *K);
+
+/*tresc funkcji */
+void init2(Queue2 *K)
+{
+   init(&(K->Data1));
+   init(&(K->Data2));
+   K->length = 10;
+   K->head = 0;
+   K->tail = 0;
+
+}
+
+void enqueue2(Queue2 *K, int k)
+{
+push(&(K->Data1), k);
+K->tail++;
+}
+void write_queue2(Queue2 K)
+{
+    write(K.Data1);
+}
+
+int is_empty(Queue2 K)
+{
+    if(K.head == K.tail)
+        return 1;
+    else
+        return 0;
+}
+
+int check_empty(int x)
+{
+    write_empty(x);
+}
+
+int dequeue(Queue2 *K)
+{
+    int q,i;
+    if(K->tail == K->head)
+    {
+        printf("underflow\n");
+    }
+    else
+    {
+        for(i = 0; i < (K->tail) - 1; i++) {
+			push((&(K->Data2)), pop(&(K->Data1)));
+		}
+
+		q = pop(&(K->Data1));
+		K->tail--;
+
+		for(i = 0; i < (K->tail); i++) {
+			push((&(K->Data1)), pop(&(K->Data2)));
+		}
+		return q;
+	}
+
+    }
+
+
+
+
+
+
 
 
 
 
 int main(void)
 {
-	Queue Q;
-	Stack S;
+	/* Queue Q; */
 
-    /* Stos */
+	Stack S;
+	Queue2 K;
+
+
+
+
+
+
+
+    /*Stos */
+
 	init(&S);
     push(&S,1);
     push(&S,2);
@@ -212,9 +306,11 @@ int main(void)
    write(S);
    write_empty(stack_empty(S));
 
+
    putchar('\n');
 
-   /*Kolejka */
+
+   /*Kolejka
 
 
    init_Q(&Q);
@@ -231,6 +327,30 @@ int main(void)
     write_deq(Dequeue(&Q));
     write_Q(Q);
     write_Q_Empty(Queue_Empty(Q));
+    */
+
+
+    /* Kolejka przy pomocy dwoch stosow */
+
+    init2(&K);
+	enqueue2(&K,1);
+	enqueue2(&K,2);
+	write_queue2(K);
+	enqueue2(&K,3);
+	write_queue2(K);
+	check_empty(is_empty(K));
+	write_deq(dequeue(&K));
+	write_deq(dequeue(&K));
+	write_queue2(K);
+	write_deq(dequeue(&K));
+	write_deq(dequeue(&K));
+	write_queue2(K);
+	check_empty(is_empty(K));
+
+
+
+
+
 
 
 	return 0;
