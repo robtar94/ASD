@@ -193,8 +193,8 @@ typedef struct Queue2
 {
 
 
-Stack Data1;
-Stack Data2;
+Stack data1;
+Stack data2;
 int length;
 int head;
 int tail;
@@ -212,8 +212,8 @@ int dequeue(Queue2 *K);
 /*tresc funkcji */
 void init2(Queue2 *K)
 {
-   init(&(K->Data1));
-   init(&(K->Data2));
+   init(&(K->data1));
+   init(&(K->data2));
    K->length = 10;
    K->head = 0;
    K->tail = 0;
@@ -222,12 +222,12 @@ void init2(Queue2 *K)
 
 void enqueue2(Queue2 *K, int k)
 {
-push(&(K->Data1), k);
+push(&(K->data1), k);
 K->tail++;
 }
 void write_queue2(Queue2 K)
 {
-    write(K.Data1);
+    write(K.data1);
 }
 
 int is_empty(Queue2 K)
@@ -254,14 +254,14 @@ int dequeue(Queue2 *K)
     else
     {
         for(i = 0; i < (K->tail) - 1; i++) {
-			push((&(K->Data2)), pop(&(K->Data1)));
+			push((&(K->data2)), pop(&(K->data1)));
 		}
 
-		q = pop(&(K->Data1));
+		q = pop(&(K->data1));
 		K->tail--;
 
 		for(i = 0; i < (K->tail); i++) {
-			push((&(K->Data1)), pop(&(K->Data2)));
+			push((&(K->data1)), pop(&(K->data2)));
 		}
 		return q;
 	}
