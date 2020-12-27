@@ -241,6 +241,7 @@ int is_empty(Queue2 K)
 int check_empty(int x)
 {
     write_empty(x);
+    return 0;
 }
 
 int dequeue(Queue2 *K)
@@ -264,6 +265,7 @@ int dequeue(Queue2 *K)
 		}
 		return q;
 	}
+	return 0;
 
     }
 
