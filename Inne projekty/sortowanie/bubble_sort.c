@@ -7,32 +7,34 @@ int main (void)
 	void swap(int *x, int *y);
 	int *A = malloc(sizeof(int) *n); /*tablica dynamiczna o rozmiarze n elementow */
 	scanf("%d", &d); /*liczba testow */
-	
-	
-	for(k=0; k<d; k++){
+
+
+	for(i=0; i<d; i++){
 		scanf("%d", &n); /* liczba cyfr w ciagu */
-		for(i=0; i<n; i++) /*wypelnianie tablicy */
+		for(j=0; j<n; j++) /*wypelnianie tablicy */
 		{
-			scanf("%d", &j); /* wczytanie liczby */
-			A[i] = j; /*umieszczanie liczby w tablicy */
+			scanf("%d", &k); /* wczytanie liczby */
+			A[j] = k; /*umieszczanie liczby w tablicy */
 		}
 		bubble(A,n);
-		
-		
+
+
 		for(i=0; i<n; i++) /*wypelnianie tablicy */
 		{
 			printf("%d ", A[i]); /* wczytanie liczby */
 		}
 		printf("\n");
 	}
-	
+
+	free(A);
+
 	return 0;
 }
 void swap(int *x, int *y)
 {
 	int temp = *x;
 	*x = *y;
-	*y = temp;	
+	*y = temp;
 }
 
 void bubble(int *A, int n)
