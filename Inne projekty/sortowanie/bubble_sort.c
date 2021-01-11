@@ -19,9 +19,9 @@ int main (void)
 		bubble(A,n);
 
 
-		for(i=0; i<n; i++) /*wypelnianie tablicy */
+		for(i=0; i<n; i++) /*wyswietlanie tablicy */
 		{
-			printf("%d ", A[i]); /* wczytanie liczby */
+			printf("%d ", A[i]); /* wyswietlanie liczby */
 		}
 		printf("\n");
 	}
