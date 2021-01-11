@@ -213,5 +213,6 @@ int main (void)
 	delete(&L,5);
 	write(L);
 	insert_before(&L,5,3);
+	write(L);
 	return 0;
 }
